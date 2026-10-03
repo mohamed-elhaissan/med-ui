@@ -77,7 +77,7 @@ items.push({
   name: "all",
   type: "registry:item",
   title: "All Components",
-  description: "Every i-ui component in one install.",
+  description: "Every med-ui component in one install.",
   registryDependencies: items
     .filter((item) => item.type === "registry:ui")
     .map((item) => itemUrl(item.name)),
@@ -85,7 +85,7 @@ items.push({
 
 const registry = {
   $schema: "https://ui.shadcn.com/schema/registry.json",
-  name: "i-ui",
+  name: "med-ui",
   homepage: BASE_URL,
   items,
 }

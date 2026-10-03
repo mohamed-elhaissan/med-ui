@@ -6,7 +6,7 @@ import { DocsPage } from "@/components/site/docs-page"
 import { Code, H2, P, UL } from "@/components/site/docs-typography"
 import { siteConfig } from "@/lib/site"
 
-export const metadata: Metadata = { title: "MCP Server · i-ui" }
+export const metadata: Metadata = { title: "MCP Server · med-ui" }
 
 const CLIENTS = [
   { value: "claude", label: "Claude Code" },
@@ -17,13 +17,13 @@ const CLIENTS = [
 ]
 
 const REGISTRY_CONFIG = JSON.stringify(
-  { registries: { "@i-ui": `${siteConfig.url}/r/{name}.json` } },
+  { registries: { "@med-ui": `${siteConfig.url}/r/{name}.json` } },
   null,
   2
 )
 
 const MCP_CONFIG = JSON.stringify(
-  { mcpServers: { "i-ui": { command: "npx", args: ["shadcn@latest", "mcp"] } } },
+  { mcpServers: { "med-ui": { command: "npx", args: ["shadcn@latest", "mcp"] } } },
   null,
   2
 )
@@ -33,7 +33,7 @@ export default function McpPage() {
     <DocsPage
       href="/docs/mcp"
       title="MCP Server"
-      description="Let your AI assistant browse, search and install i-ui components using natural language."
+      description="Let your AI assistant browse, search and install med-ui components using natural language."
       toc={[
         { id: "how-it-works", title: "How It Works" },
         { id: "quick-start", title: "Quick Start" },
@@ -43,14 +43,14 @@ export default function McpPage() {
     >
       <H2 id="how-it-works">How It Works</H2>
       <P>
-        i-ui works with an MCP (Model Context Protocol) server. Once connected, your AI assistant
-        can browse i-ui, read component source and examples, and install components into your
+        med-ui works with an MCP (Model Context Protocol) server. Once connected, your AI assistant
+        can browse med-ui, read component source and examples, and install components into your
         project for you.
       </P>
 
       <H2 id="quick-start">Quick Start</H2>
       <P>
-        First, tell your project where i-ui lives by adding it to <Code>components.json</Code>:
+        First, tell your project where med-ui lives by adding it to <Code>components.json</Code>:
       </P>
       <CodeBlock lang="json" title="components.json" code={REGISTRY_CONFIG} className="mt-6" />
       <P>Then run the setup command for your client:</P>
@@ -80,9 +80,9 @@ export default function McpPage() {
       <H2 id="example-prompts">Example Prompts</H2>
       <P>Once connected, ask your assistant things like:</P>
       <UL>
-        <li>Show me all the components in the i-ui registry.</li>
-        <li>Add the i-ui button, dialog and field components to my project.</li>
-        <li>Build a settings page with a sidebar using i-ui components.</li>
+        <li>Show me all the components in the med-ui registry.</li>
+        <li>Add the med-ui button, dialog and field components to my project.</li>
+        <li>Build a settings page with a sidebar using med-ui components.</li>
       </UL>
     </DocsPage>
   )

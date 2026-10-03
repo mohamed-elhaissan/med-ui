@@ -64,7 +64,7 @@ function theme(name: string, type: "dark" | "light", c: Palette): ThemeRegistrat
   }
 }
 
-const themes = { light: theme("i-ui-light", "light", LIGHT), dark: theme("i-ui-dark", "dark", DARK) }
+const themes = { light: theme("med-ui-light", "light", LIGHT), dark: theme("med-ui-dark", "dark", DARK) }
 
 export function highlight(code: string, lang: BundledLanguage) {
   return codeToHtml(code, { lang, themes, defaultColor: false })

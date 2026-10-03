@@ -22,7 +22,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "i-ui",
+  title: "med-ui",
   description: "Beautifully designed components you install and own.",
 };
 

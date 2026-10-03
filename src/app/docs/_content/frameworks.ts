@@ -280,7 +280,7 @@ export function componentsJson(framework: Framework) {
         lib: `${a}/lib`,
         hooks: `${a}/hooks`,
       },
-      registries: { "@i-ui": `${siteConfig.url}/r/{name}.json` },
+      registries: { "@med-ui": `${siteConfig.url}/r/{name}.json` },
     },
     null,
     2

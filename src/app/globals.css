@@ -136,7 +136,7 @@
   }
 }
 
-/* @site-only: everything below styles the docs site, not the i-ui theme. */
+/* @site-only: everything below styles the docs site, not the med-ui theme. */
 
 :root {
   --header-height: 3.5rem;

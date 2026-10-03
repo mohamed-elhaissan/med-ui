@@ -8,7 +8,7 @@ import { NEW_COMPONENTS } from "@/lib/docs"
 import { components } from "@/lib/registry"
 import { registryItemUrl } from "@/lib/site"
 
-export const metadata: Metadata = { title: "Components · i-ui" }
+export const metadata: Metadata = { title: "Components · med-ui" }
 
 function ComponentGrid({ items }: { items: typeof components }) {
   return (

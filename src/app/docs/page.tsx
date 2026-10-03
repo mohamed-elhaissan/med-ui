@@ -21,7 +21,7 @@ import {
 } from "./_content/frameworks"
 import * as s from "./_content/snippets"
 
-export const metadata: Metadata = { title: "Introduction · i-ui" }
+export const metadata: Metadata = { title: "Introduction · med-ui" }
 
 function Snippets({ items }: { items: Snippet[] }) {
   return items.map((item, index) => (
@@ -41,9 +41,9 @@ export default function IntroductionPage() {
     <DocsPage
       href="/docs"
       title="Introduction"
-      description="Everything you need to build with i-ui from an empty folder: framework, fonts, theme, dark mode, and your first components."
+      description="Everything you need to build with med-ui from an empty folder: framework, fonts, theme, dark mode, and your first components."
       toc={[
-        { id: "what-is-i-ui", title: "What is i-ui?" },
+        { id: "what-is-med-ui", title: "What is med-ui?" },
         { id: "quick-start", title: "Quick Start" },
         { id: "requirements", title: "Requirements" },
         { id: "create-project", title: "1. Create a Project" },
@@ -59,9 +59,9 @@ export default function IntroductionPage() {
       ]}
     >
       <FrameworkProvider options={FRAMEWORKS.map(({ id, name }) => ({ id, name }))}>
-        <H2 id="what-is-i-ui">What is i-ui?</H2>
+        <H2 id="what-is-med-ui">What is med-ui?</H2>
         <P>
-          i-ui is a component library you install one component at a time. It is not an npm
+          med-ui is a component library you install one component at a time. It is not an npm
           package you import. Each component&apos;s source code is copied into your project, so you
           can read it, change it, and ship it as your own. It currently has {components.length}{" "}
           components, built with React, Base UI primitives and Tailwind CSS v4.
@@ -70,7 +70,7 @@ export default function IntroductionPage() {
         <H2 id="quick-start">Quick Start</H2>
         <P>Already set up (steps 1 to 5 below)? Install every component with one command:</P>
         <div className="mt-6">
-          <InstallCommand target="@i-ui/all" label="Install-all command" />
+          <InstallCommand target="@med-ui/all" label="Install-all command" />
         </div>
         <P>Starting from scratch? Follow the steps below. They take about five minutes.</P>
 
@@ -84,7 +84,7 @@ export default function IntroductionPage() {
 
         <H2 id="create-project">1. Create a Project</H2>
         <P>
-          i-ui works with any React framework that uses Tailwind CSS v4. Pick yours, and every step
+          med-ui works with any React framework that uses Tailwind CSS v4. Pick yours, and every step
           below updates with the right files and paths.
         </P>
         <FrameworkPicker />
@@ -110,7 +110,7 @@ export default function IntroductionPage() {
 
         <H2 id="fonts">3. Fonts</H2>
         <P>
-          i-ui uses <strong>Inter</strong> for interface text, <strong>Source Serif 4</strong> for
+          med-ui uses <strong>Inter</strong> for interface text, <strong>Source Serif 4</strong> for
           headings and <strong>JetBrains Mono</strong> for code. All three are free.
         </P>
         <FrameworkContent variants={perFramework((framework) => <Snippets items={framework.fonts} />)} />
@@ -130,7 +130,7 @@ export default function IntroductionPage() {
                 label="Download command"
               />
               <p className="leading-relaxed">
-                Then replace the contents of <Code>{framework.css}</Code> with the full i-ui theme
+                Then replace the contents of <Code>{framework.css}</Code> with the full med-ui theme
                 below.
               </p>
             </>
@@ -158,7 +158,7 @@ export default function IntroductionPage() {
         />
         <H3>components.json</H3>
         <P>
-          This file tells the installer where to put components and where to find i-ui. Create it
+          This file tells the installer where to put components and where to find med-ui. Create it
           in your project root:
         </P>
         <FrameworkContent
@@ -184,11 +184,11 @@ export default function IntroductionPage() {
         <H2 id="add-components">7. Add Components</H2>
         <P>You&apos;re ready. Install all {components.length} components with one command:</P>
         <div className="mt-6">
-          <InstallCommand target="@i-ui/all" label="Install-all command" />
+          <InstallCommand target="@med-ui/all" label="Install-all command" />
         </div>
         <P>Or add only the components you need, by name:</P>
         <div className="mt-6">
-          <InstallCommand target="@i-ui/button" />
+          <InstallCommand target="@med-ui/button" />
         </div>
         <P>Or install straight from a component&apos;s URL:</P>
         <div className="mt-6">
@@ -202,7 +202,7 @@ export default function IntroductionPage() {
         <H2 id="registry">How the Registry Works</H2>
         <P>
           Components live in <Code>src/components/ui</Code>. One command reads every file&apos;s
-          imports to find its npm dependencies and the other i-ui components it needs, writes{" "}
+          imports to find its npm dependencies and the other med-ui components it needs, writes{" "}
           <Code>registry.json</Code>, and builds one JSON file per component into{" "}
           <Code>public/r</Code>:
         </P>

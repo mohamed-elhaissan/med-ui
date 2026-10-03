@@ -1,6 +1,6 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "i-ui",
+  "name": "med-ui",
   "homepage": "https://ui.elhcn.com",
   "items": [
     {
@@ -1114,7 +1114,7 @@
       "name": "all",
       "type": "registry:item",
       "title": "All Components",
-      "description": "Every i-ui component in one install.",
+      "description": "Every med-ui component in one install.",
       "registryDependencies": [
         "https://ui.elhcn.com/r/accordion.json",
         "https://ui.elhcn.com/r/alert-dialog.json",

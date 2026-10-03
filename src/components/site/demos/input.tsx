@@ -24,7 +24,7 @@ export function InputDemo() {
         <Label htmlFor="input-demo-workspace">Workspace URL</Label>
         <Input
           id="input-demo-workspace"
-          defaultValue="acme.i-ui.dev"
+          defaultValue="acme.med-ui.dev"
           disabled
         />
       </div>

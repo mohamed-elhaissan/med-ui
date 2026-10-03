@@ -4,7 +4,7 @@ import { CodeBlock } from "@/components/site/code-block"
 import { DocsPage } from "@/components/site/docs-page"
 import { Code, H2, P } from "@/components/site/docs-typography"
 
-export const metadata: Metadata = { title: "Theming · i-ui" }
+export const metadata: Metadata = { title: "Theming · med-ui" }
 
 const TOKENS = `:root {
   --background: #ffffff;
@@ -45,7 +45,7 @@ export default function ThemingPage() {
     >
       <H2 id="css-variables">CSS Variables</H2>
       <P>
-        i-ui ships a Linear-inspired palette: a near-black canvas, charcoal surfaces, hairline
+        med-ui ships a Linear-inspired palette: a near-black canvas, charcoal surfaces, hairline
         borders and a lavender-blue accent. The tokens live in your global CSS file:
       </P>
       <CodeBlock lang="css" title="app/globals.css" code={TOKENS} className="mt-6" />

@@ -1,5 +1,5 @@
 export const siteConfig = {
-  name: "i-ui",
+  name: "med-ui",
   description: "Beautifully designed components you install and own.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ui.elhcn.com",
   github: "https://github.com/mohamed-elhaissan/i-ui",

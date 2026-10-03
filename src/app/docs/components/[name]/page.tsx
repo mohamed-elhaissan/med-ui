@@ -31,7 +31,7 @@ export async function generateMetadata({
   params,
 }: PageProps<"/docs/components/[name]">): Promise<Metadata> {
   const { name } = await params
-  return { title: `${getComponent(name)?.title ?? "Component"} · i-ui` }
+  return { title: `${getComponent(name)?.title ?? "Component"} · med-ui` }
 }
 
 export default async function ComponentPage({ params }: PageProps<"/docs/components/[name]">) {
