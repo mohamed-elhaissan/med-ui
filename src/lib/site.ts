@@ -4,7 +4,6 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://ui.elhcn.com",
   github: "https://github.com/mohamed-elhaissan/i-ui",
   navItems: [
-    { href: "/", label: "Home" },
     { href: "/docs", label: "Docs" },
     { href: "/docs/components", label: "Components" },
   ],
