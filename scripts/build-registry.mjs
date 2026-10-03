@@ -1,4 +1,4 @@
-// Generates registry.json from src/components/ui, src/hooks and src/lib/utils.ts by reading each file's imports.
+// Builds registry.json and the public/r item files from src/components/ui, src/hooks and src/lib/utils.ts.
 import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs"
 import { basename, extname, join } from "node:path"
 
@@ -90,7 +90,21 @@ const registry = {
   items,
 }
 
-writeFileSync("registry.json", JSON.stringify(registry, null, 2) + "\n")
-mkdirSync("public", { recursive: true })
+const registryJson = JSON.stringify(registry, null, 2) + "\n"
+writeFileSync("registry.json", registryJson)
+
+mkdirSync("public/r", { recursive: true })
+writeFileSync("public/r/registry.json", registryJson)
+for (const { type, files, ...rest } of items) {
+  const item = {
+    $schema: "https://ui.shadcn.com/schema/registry-item.json",
+    ...rest,
+    ...(files && {
+      files: files.map((file) => ({ path: file.path, content: readFileSync(file.path, "utf8"), type: file.type })),
+    }),
+    type,
+  }
+  writeFileSync(`public/r/${item.name}.json`, JSON.stringify(item, null, 2))
+}
 copyFileSync("src/styles/base.css", "public/base.css")
 console.log(`registry.json: ${items.length} items (${BASE_URL})`)
