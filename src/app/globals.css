@@ -1,6 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import "shadcn/tailwind.css";
+@import "../styles/base.css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -50,11 +50,6 @@
 }
 
 :root {
-  --header-height: 3.5rem;
-  --code-keyword: #5e6ad2;
-  --code-function: #0e7c8f;
-  --code-string: #a05a00;
-  --code-punctuation: #62666d;
   --background: #ffffff;
   --foreground: #0f1011;
   --card: #ffffff;
@@ -91,10 +86,6 @@
 
 .dark {
   color-scheme: dark;
-  --code-keyword: #828fff;
-  --code-function: #5ec4d6;
-  --code-string: #e6b673;
-  --code-punctuation: #8a8f98;
   --background: #010102;
   --foreground: #f7f8f8;
   --card: #0f1011;
@@ -137,7 +128,6 @@
   }
   html {
     @apply font-sans;
-    scroll-padding-top: var(--header-height);
   }
   h1,
   h2,
@@ -145,6 +135,28 @@
     @apply font-heading;
   }
 }
+
+/* @site-only: everything below styles the docs site, not the i-ui theme. */
+
+:root {
+  --header-height: 3.5rem;
+  --code-keyword: #5e6ad2;
+  --code-function: #0e7c8f;
+  --code-string: #a05a00;
+  --code-punctuation: #62666d;
+}
+
+.dark {
+  --code-keyword: #828fff;
+  --code-function: #5ec4d6;
+  --code-string: #e6b673;
+  --code-punctuation: #8a8f98;
+}
+
+html {
+  scroll-padding-top: var(--header-height);
+}
+
 @utility no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

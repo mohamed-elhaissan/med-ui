@@ -1,5 +1,5 @@
 // Generates registry.json from src/components/ui, src/hooks and src/lib/utils.ts by reading each file's imports.
-import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs"
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from "node:fs"
 import { basename, extname, join } from "node:path"
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ui.elhcn.com"
@@ -81,4 +81,6 @@ const registry = {
 }
 
 writeFileSync("registry.json", JSON.stringify(registry, null, 2) + "\n")
+mkdirSync("public", { recursive: true })
+copyFileSync("src/styles/base.css", "public/base.css")
 console.log(`registry.json: ${items.length} items (${BASE_URL})`)
