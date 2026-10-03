@@ -23,6 +23,8 @@ function exportedNames(source: string) {
     .filter((name) => /^[A-Z]/.test(name))
 }
 
+export const dynamicParams = false
+
 export function generateStaticParams() {
   return components.map(({ name }) => ({ name }))
 }
