@@ -9,7 +9,7 @@
     "react-day-picker"
   ],
   "registryDependencies": [
-    "http://localhost:3000/r/button.json"
+    "https://ui.elhcn.com/r/button.json"
   ],
   "files": [
     {

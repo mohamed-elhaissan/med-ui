@@ -9,7 +9,7 @@
     "lucide-react"
   ],
   "registryDependencies": [
-    "http://localhost:3000/r/dropdown-menu.json"
+    "https://ui.elhcn.com/r/dropdown-menu.json"
   ],
   "files": [
     {

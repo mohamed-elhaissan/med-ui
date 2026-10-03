@@ -4,7 +4,7 @@ export function SiteFooter() {
   return (
     <footer className="px-4 xl:px-6">
       <div className="flex h-14 items-center justify-center px-1 text-center text-xs leading-loose text-muted-foreground sm:text-sm">
-        Built on shadcn/ui. The source code is available on{" "}
+        {siteConfig.name}. The source code is available on{" "}
         <a
           href={siteConfig.github}
           target="_blank"

@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 
 import { CodeBlock } from "@/components/site/code-block"
 import { DocsPage } from "@/components/site/docs-page"
-import { Code, DocLinkA, H2, H3, P, UL } from "@/components/site/docs-typography"
+import { Code, DocLinkA, H2, P, UL } from "@/components/site/docs-typography"
 import { InstallCommand } from "@/components/site/install-command"
 import { components } from "@/lib/registry"
 import { registryItemUrl, siteConfig } from "@/lib/site"
@@ -22,23 +22,14 @@ export function PriceTag({ className, ...props }: React.ComponentProps<"span">) 
 }`
 
 export default function IntroductionPage() {
-  const registryJson = JSON.stringify(
-    { registries: { "@i-ui": `${siteConfig.url}/r/{name}.json` } },
-    null,
-    2
-  )
-
   return (
     <DocsPage
       href="/docs"
       title="Introduction"
-      description="Everything you need to use i-ui and grow it into your own component library: what it is, how to install it, the CLI, and how the registry is built."
+      description="Everything you need to use i-ui and grow it into your own component library: what it is, how to install components, and how the registry is built."
       toc={[
         { id: "what-is-i-ui", title: "What is i-ui?" },
         { id: "installation", title: "Installation" },
-        { id: "add-registry", title: "Add the Registry" },
-        { id: "add-components", title: "Add Components" },
-        { id: "cli", title: "CLI" },
         { id: "registry", title: "How the Registry Works" },
         { id: "your-own-components", title: "Add Your Own Components" },
         { id: "next-steps", title: "Next Steps" },
@@ -46,10 +37,10 @@ export default function IntroductionPage() {
     >
       <H2 id="what-is-i-ui">What is i-ui?</H2>
       <P>
-        i-ui is a component library delivered as a shadcn registry. It is not an npm package you
-        import. Each component&apos;s source code is copied into your project, so you can read it,
-        change it, and ship it as your own. It currently has {components.length} components, built
-        on shadcn/ui, Base UI primitives and Tailwind CSS v4.
+        i-ui is a component library you install one component at a time. It is not an npm package
+        you import. Each component&apos;s source code is copied into your project, so you can read
+        it, change it, and ship it as your own. It currently has {components.length} components,
+        built with React, Base UI primitives and Tailwind CSS v4.
       </P>
       <UL>
         <li>
@@ -67,41 +58,15 @@ export default function IntroductionPage() {
       <H2 id="installation">Installation</H2>
       <P>
         i-ui works in any React project with Tailwind CSS v4, such as Next.js, Vite or React
-        Router. If your project isn&apos;t set up for shadcn yet, initialize it first:
+        Router. Install a component with one command. Its dependencies come with it:
       </P>
-      <div className="mt-6">
-        <InstallCommand subcommand="init" />
-      </div>
-      <P>
-        This creates a <Code>components.json</Code> file and sets up your CSS variables.
-      </P>
-
-      <H3 id="add-registry">Add the Registry</H3>
-      <P>
-        Register i-ui under the <Code>@i-ui</Code> namespace in <Code>components.json</Code>:
-      </P>
-      <CodeBlock lang="json" title="components.json" code={registryJson} className="mt-6" />
-
-      <H3 id="add-components">Add Components</H3>
-      <P>Add any component by name. Its dependencies are installed for you:</P>
-      <div className="mt-6">
-        <InstallCommand target="@i-ui/button" />
-      </div>
-      <P>Or skip the registry setup and install straight from a component&apos;s URL:</P>
       <div className="mt-6">
         <InstallCommand target={registryItemUrl("button")} />
       </div>
-
-      <H2 id="cli">CLI</H2>
-      <P>The shadcn CLI does the rest. Add several components at once:</P>
-      <CodeBlock lang="bash" code="npx shadcn@latest add @i-ui/dialog @i-ui/field @i-ui/sidebar" className="mt-6" />
-      <P>See a component&apos;s files before installing it:</P>
-      <CodeBlock lang="bash" code="npx shadcn@latest view @i-ui/sidebar" className="mt-6" />
-      <P>Search everything in the registry:</P>
-      <CodeBlock lang="bash" code={`npx shadcn@latest search @i-ui -q "menu"`} className="mt-6" />
       <P>
-        Add <Code>--overwrite</Code> to replace existing files, or <Code>--dry-run</Code> to preview
-        changes.
+        Every component page has its own command. Prefer to do it by hand? Open the{" "}
+        <strong>Manual</strong> tab on any <DocLinkA href="/docs/components">component page</DocLinkA>{" "}
+        to copy the source directly.
       </P>
 
       <H2 id="registry">How the Registry Works</H2>

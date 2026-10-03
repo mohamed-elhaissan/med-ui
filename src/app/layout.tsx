@@ -23,7 +23,7 @@ const mono = JetBrains_Mono({
 
 export const metadata: Metadata = {
   title: "i-ui",
-  description: "A custom component library built on shadcn/ui.",
+  description: "Beautifully designed components you install and own.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

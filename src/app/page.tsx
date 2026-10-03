@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
 
         <p className="max-w-xl text-lg text-balance text-muted-foreground">
-          {siteConfig.name} is a component library built on shadcn/ui. Install a component with one
+          {siteConfig.name} is a component library for React and Tailwind. Install a component with one
           command and the source code lands in your project, ready to customize.
         </p>
 

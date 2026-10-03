@@ -2,7 +2,7 @@
 import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs"
 import { basename, extname, join } from "node:path"
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://ui.elhcn.com"
 const DESCRIPTIONS = JSON.parse(readFileSync("scripts/descriptions.json", "utf8"))
 const PEER_PACKAGES = new Set(["react", "react-dom", "next"])
 

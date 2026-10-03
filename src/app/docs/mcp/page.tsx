@@ -3,7 +3,8 @@ import type { Metadata } from "next"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CodeBlock } from "@/components/site/code-block"
 import { DocsPage } from "@/components/site/docs-page"
-import { Code, DocLinkA, H2, P, UL } from "@/components/site/docs-typography"
+import { Code, H2, P, UL } from "@/components/site/docs-typography"
+import { siteConfig } from "@/lib/site"
 
 export const metadata: Metadata = { title: "MCP Server · i-ui" }
 
@@ -15,8 +16,14 @@ const CLIENTS = [
   { value: "opencode", label: "OpenCode" },
 ]
 
+const REGISTRY_CONFIG = JSON.stringify(
+  { registries: { "@i-ui": `${siteConfig.url}/r/{name}.json` } },
+  null,
+  2
+)
+
 const MCP_CONFIG = JSON.stringify(
-  { mcpServers: { shadcn: { command: "npx", args: ["shadcn@latest", "mcp"] } } },
+  { mcpServers: { "i-ui": { command: "npx", args: ["shadcn@latest", "mcp"] } } },
   null,
   2
 )
@@ -36,18 +43,17 @@ export default function McpPage() {
     >
       <H2 id="how-it-works">How It Works</H2>
       <P>
-        The shadcn CLI ships an MCP (Model Context Protocol) server. Once connected, your AI
-        assistant can list every registry configured in your <Code>components.json</Code>, read
-        component source and examples, and install components into your project, including
-        everything from i-ui.
+        i-ui works with an MCP (Model Context Protocol) server. Once connected, your AI assistant
+        can browse i-ui, read component source and examples, and install components into your
+        project for you.
       </P>
 
       <H2 id="quick-start">Quick Start</H2>
       <P>
-        First, add the <Code>@i-ui</Code> registry to your project as described in{" "}
-        <DocLinkA href="/docs#add-registry">Installation</DocLinkA>. Then run the
-        setup command for your client:
+        First, tell your project where i-ui lives by adding it to <Code>components.json</Code>:
       </P>
+      <CodeBlock lang="json" title="components.json" code={REGISTRY_CONFIG} className="mt-6" />
+      <P>Then run the setup command for your client:</P>
       <Tabs defaultValue="claude" className="mt-6 gap-4">
         <TabsList variant="line">
           {CLIENTS.map((client) => (

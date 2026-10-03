@@ -8,9 +8,9 @@
     "cn"
   ],
   "registryDependencies": [
-    "http://localhost:3000/r/button.json",
-    "http://localhost:3000/r/input.json",
-    "http://localhost:3000/r/textarea.json"
+    "https://ui.elhcn.com/r/button.json",
+    "https://ui.elhcn.com/r/input.json",
+    "https://ui.elhcn.com/r/textarea.json"
   ],
   "files": [
     {

@@ -8,8 +8,8 @@
     "cn"
   ],
   "registryDependencies": [
-    "http://localhost:3000/r/label.json",
-    "http://localhost:3000/r/separator.json"
+    "https://ui.elhcn.com/r/label.json",
+    "https://ui.elhcn.com/r/separator.json"
   ],
   "files": [
     {
