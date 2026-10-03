@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 
 import { CodeBlock } from "@/components/site/code-block"
 import { DocsPage } from "@/components/site/docs-page"
-import { Code, DocLinkA, H2, H3, P, UL } from "@/components/site/docs-typography"
+import { Callout, Code, DocLinkA, H2, H3, P, UL } from "@/components/site/docs-typography"
 import {
   FrameworkContent,
   FrameworkPicker,
@@ -72,7 +72,7 @@ export default function IntroductionPage() {
         <div className="mt-6">
           <InstallCommand target="@med-ui/all" label="Install-all command" />
         </div>
-        <P>Starting from scratch? Follow the steps below. They take about five minutes.</P>
+        <Callout>Starting from scratch? Follow the steps below. They take about five minutes.</Callout>
 
         <H2 id="requirements">Requirements</H2>
         <UL>
@@ -136,14 +136,15 @@ export default function IntroductionPage() {
             </>
           ))}
         />
-        <P>
-          On Windows PowerShell, type <Code>curl.exe</Code> instead of <Code>curl</Code>. This is
-          the exact theme this site uses:
-        </P>
+        <Callout type="warning">
+          On Windows PowerShell, type <Code>curl.exe</Code> instead of <Code>curl</Code>.
+        </Callout>
+        <P>This is the exact theme this site uses:</P>
         <CodeBlock lang="css" title="globals.css" code={s.themeCss()} className="mt-6" />
-        <P>
-          Want different colors? See <DocLinkA href="/docs/theming">Theming</DocLinkA>.
-        </P>
+        <Callout type="tip">
+          Want different colors? See <DocLinkA href="/docs/theming">Theming</DocLinkA> to make
+          the palette your own.
+        </Callout>
 
         <H2 id="config">5. Configuration</H2>
         <H3>Utilities</H3>
@@ -194,10 +195,10 @@ export default function IntroductionPage() {
         <div className="mt-6">
           <InstallCommand target={registryItemUrl("button")} />
         </div>
-        <P>
+        <Callout type="tip">
           Every <DocLinkA href="/docs/components">component page</DocLinkA> has its own command, a
           live preview, and a <strong>Manual</strong> tab if you prefer to copy the code by hand.
-        </P>
+        </Callout>
 
         <H2 id="registry">How the Registry Works</H2>
         <P>

@@ -34,7 +34,7 @@ export function DocsToc({ items }: { items: TocItem[] }) {
           key={item.id}
           href={`#${item.id}`}
           data-active={item.id === activeId}
-          className="text-[0.8rem] text-muted-foreground transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:text-foreground"
+          className="text-[0.8rem] text-muted-foreground transition-colors hover:text-foreground data-[active=true]:font-medium data-[active=true]:text-primary"
         >
           {item.title}
         </a>

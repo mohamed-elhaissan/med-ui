@@ -8,7 +8,7 @@ import { siteConfig } from "@/lib/site"
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-50 w-full bg-background">
+    <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="mx-auto w-full px-6">
         <div className="flex h-(--header-height) items-center gap-1">
           <MobileNav className="flex lg:hidden" />

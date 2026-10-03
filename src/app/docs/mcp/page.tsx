@@ -3,7 +3,7 @@ import type { Metadata } from "next"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CodeBlock } from "@/components/site/code-block"
 import { DocsPage } from "@/components/site/docs-page"
-import { Code, H2, P, UL } from "@/components/site/docs-typography"
+import { Callout, Code, H2, P, UL } from "@/components/site/docs-typography"
 import { siteConfig } from "@/lib/site"
 
 export const metadata: Metadata = { title: "MCP Server · med-ui" }
@@ -68,7 +68,7 @@ export default function McpPage() {
           </TabsContent>
         ))}
       </Tabs>
-      <P>Restart your client afterwards so it picks up the new server.</P>
+      <Callout>Restart your client afterwards so it picks up the new server.</Callout>
 
       <H2 id="manual-setup">Manual Setup</H2>
       <P>
