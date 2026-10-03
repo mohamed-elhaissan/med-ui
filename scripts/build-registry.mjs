@@ -3,6 +3,7 @@ import { readdirSync, readFileSync, writeFileSync, existsSync } from "node:fs"
 import { basename, extname, join } from "node:path"
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"
+const DESCRIPTIONS = JSON.parse(readFileSync("scripts/descriptions.json", "utf8"))
 const PEER_PACKAGES = new Set(["react", "react-dom", "next"])
 
 const sources = [
@@ -53,6 +54,7 @@ function buildItem(path, type, name) {
     name,
     type,
     title: title(name),
+    ...(DESCRIPTIONS[name] && { description: DESCRIPTIONS[name] }),
     ...(dependencies.size && { dependencies: [...dependencies].sort() }),
     ...(registryDependencies.size && { registryDependencies: [...registryDependencies].sort() }),
     files: [{ path: path.replaceAll("\\", "/"), type }],

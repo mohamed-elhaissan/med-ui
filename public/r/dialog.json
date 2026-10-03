@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "dialog",
   "title": "Dialog",
+  "description": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
   "dependencies": [
     "@base-ui/react",
     "cn",

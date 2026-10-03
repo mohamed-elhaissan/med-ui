@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "badge",
   "title": "Badge",
+  "description": "Displays a badge or a component that looks like a badge.",
   "dependencies": [
     "@base-ui/react",
     "class-variance-authority",

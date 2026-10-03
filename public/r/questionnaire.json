@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "questionnaire",
   "title": "Questionnaire",
+  "description": "A multi-step questionnaire with single-choice, multiple-choice, freeform, and skippable questions.",
   "dependencies": [
     "@shadcn/react",
     "cn",

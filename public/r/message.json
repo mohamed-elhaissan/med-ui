@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "message",
   "title": "Message",
+  "description": "Displays a message in a conversation, with optional avatar, header, footer, and alignment.",
   "dependencies": [
     "cn"
   ],

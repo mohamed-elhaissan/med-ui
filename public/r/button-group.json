@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "button-group",
   "title": "Button Group",
+  "description": "A container that groups related buttons together with consistent styling.",
   "dependencies": [
     "@base-ui/react",
     "class-variance-authority",

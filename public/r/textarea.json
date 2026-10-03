@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "textarea",
   "title": "Textarea",
+  "description": "Displays a form textarea or a component that looks like a textarea.",
   "dependencies": [
     "cn"
   ],

@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "carousel",
   "title": "Carousel",
+  "description": "A carousel with motion and swipe built using Embla.",
   "dependencies": [
     "cn",
     "embla-carousel-react",

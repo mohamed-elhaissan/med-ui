@@ -7,7 +7,7 @@ import { installCommand, siteConfig } from "@/lib/site"
 
 export default function Home() {
   return (
-    <main className="relative flex flex-1 flex-col overflow-hidden">
+    <div className="relative flex flex-1 flex-col overflow-hidden">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,black,transparent)]"
@@ -25,7 +25,7 @@ export default function Home() {
         </p>
 
         <Link
-          href="/components"
+          href="/docs/components"
           className={buttonVariants({ size: "lg", className: "h-11 px-5 text-base" })}
         >
           Browse components
@@ -34,6 +34,6 @@ export default function Home() {
 
         <CopyCommand command={installCommand("button")} />
       </div>
-    </main>
+    </div>
   )
 }

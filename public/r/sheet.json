@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "sheet",
   "title": "Sheet",
+  "description": "Extends the Dialog component to display content that complements the main content of the screen.",
   "dependencies": [
     "@base-ui/react",
     "cn",

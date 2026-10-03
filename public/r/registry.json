@@ -7,6 +7,7 @@
       "name": "accordion",
       "type": "registry:ui",
       "title": "Accordion",
+      "description": "A vertically stacked set of interactive headings that each reveal a section of content.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -23,6 +24,7 @@
       "name": "alert-dialog",
       "type": "registry:ui",
       "title": "Alert Dialog",
+      "description": "A modal dialog that interrupts the user with important content and expects a response.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -41,6 +43,7 @@
       "name": "alert",
       "type": "registry:ui",
       "title": "Alert",
+      "description": "Displays a callout for user attention.",
       "dependencies": [
         "class-variance-authority",
         "cn"
@@ -56,6 +59,7 @@
       "name": "aspect-ratio",
       "type": "registry:ui",
       "title": "Aspect Ratio",
+      "description": "Displays content within a desired ratio.",
       "dependencies": [
         "cn"
       ],
@@ -70,6 +74,7 @@
       "name": "attachment",
       "type": "registry:ui",
       "title": "Attachment",
+      "description": "Displays a file or image attachment with media, metadata, upload state, and actions.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -89,6 +94,7 @@
       "name": "avatar",
       "type": "registry:ui",
       "title": "Avatar",
+      "description": "An image element with a fallback for representing the user.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -104,6 +110,7 @@
       "name": "badge",
       "type": "registry:ui",
       "title": "Badge",
+      "description": "Displays a badge or a component that looks like a badge.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -120,6 +127,7 @@
       "name": "breadcrumb",
       "type": "registry:ui",
       "title": "Breadcrumb",
+      "description": "Displays the path to the current resource using a hierarchy of links.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -136,6 +144,7 @@
       "name": "bubble",
       "type": "registry:ui",
       "title": "Bubble",
+      "description": "Displays conversational content in a message bubble. Supports variants, alignment, grouping, reactions, and collapsible content.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -152,6 +161,7 @@
       "name": "button-group",
       "type": "registry:ui",
       "title": "Button Group",
+      "description": "A container that groups related buttons together with consistent styling.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -171,6 +181,7 @@
       "name": "button",
       "type": "registry:ui",
       "title": "Button",
+      "description": "Displays a button or a component that looks like a button.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -187,6 +198,7 @@
       "name": "calendar",
       "type": "registry:ui",
       "title": "Calendar",
+      "description": "A calendar component that allows users to select a date or a range of dates.",
       "dependencies": [
         "cn",
         "lucide-react",
@@ -206,6 +218,7 @@
       "name": "card",
       "type": "registry:ui",
       "title": "Card",
+      "description": "Displays a card with header, content, and footer.",
       "dependencies": [
         "cn"
       ],
@@ -220,6 +233,7 @@
       "name": "carousel",
       "type": "registry:ui",
       "title": "Carousel",
+      "description": "A carousel with motion and swipe built using Embla.",
       "dependencies": [
         "cn",
         "embla-carousel-react",
@@ -239,6 +253,7 @@
       "name": "chart",
       "type": "registry:ui",
       "title": "Chart",
+      "description": "Beautiful charts. Built using Recharts. Copy and paste into your apps.",
       "dependencies": [
         "cn",
         "recharts"
@@ -254,6 +269,7 @@
       "name": "checkbox",
       "type": "registry:ui",
       "title": "Checkbox",
+      "description": "A control that allows the user to toggle between checked and not checked.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -270,6 +286,7 @@
       "name": "collapsible",
       "type": "registry:ui",
       "title": "Collapsible",
+      "description": "An interactive component which expands/collapses a panel.",
       "dependencies": [
         "@base-ui/react"
       ],
@@ -284,6 +301,7 @@
       "name": "combobox",
       "type": "registry:ui",
       "title": "Combobox",
+      "description": "Autocomplete input with a list of suggestions.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -304,6 +322,7 @@
       "name": "command",
       "type": "registry:ui",
       "title": "Command",
+      "description": "Command menu for search and quick actions.",
       "dependencies": [
         "cmdk",
         "cn",
@@ -324,6 +343,7 @@
       "name": "context-menu",
       "type": "registry:ui",
       "title": "Context Menu",
+      "description": "Displays a menu of actions triggered by a right click.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -340,6 +360,7 @@
       "name": "dialog",
       "type": "registry:ui",
       "title": "Dialog",
+      "description": "A window overlaid on either the primary window or another dialog window, rendering the content underneath inert.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -359,6 +380,7 @@
       "name": "direction",
       "type": "registry:ui",
       "title": "Direction",
+      "description": "A provider component that sets the text direction for your application.",
       "dependencies": [
         "@base-ui/react"
       ],
@@ -373,6 +395,7 @@
       "name": "drawer",
       "type": "registry:ui",
       "title": "Drawer",
+      "description": "A drawer component for React.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -388,6 +411,7 @@
       "name": "dropdown-menu",
       "type": "registry:ui",
       "title": "Dropdown Menu",
+      "description": "Displays a menu to the user — such as a set of actions or functions — triggered by a button.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -404,6 +428,7 @@
       "name": "empty",
       "type": "registry:ui",
       "title": "Empty",
+      "description": "Use the Empty component to display an empty state.",
       "dependencies": [
         "class-variance-authority",
         "cn"
@@ -419,6 +444,7 @@
       "name": "field",
       "type": "registry:ui",
       "title": "Field",
+      "description": "Combine labels, controls, and help text to compose accessible form fields and grouped inputs.",
       "dependencies": [
         "class-variance-authority",
         "cn"
@@ -438,6 +464,7 @@
       "name": "hover-card",
       "type": "registry:ui",
       "title": "Hover Card",
+      "description": "For sighted users to preview content available behind a link.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -453,6 +480,7 @@
       "name": "input-group",
       "type": "registry:ui",
       "title": "Input Group",
+      "description": "Add addons, buttons, and helper content to inputs.",
       "dependencies": [
         "class-variance-authority",
         "cn"
@@ -473,6 +501,7 @@
       "name": "input-otp",
       "type": "registry:ui",
       "title": "Input OTP",
+      "description": "Accessible one-time password component with copy-paste functionality.",
       "dependencies": [
         "cn",
         "input-otp",
@@ -489,6 +518,7 @@
       "name": "input",
       "type": "registry:ui",
       "title": "Input",
+      "description": "A text input component for forms and user data entry with built-in styling and accessibility features.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -504,6 +534,7 @@
       "name": "item",
       "type": "registry:ui",
       "title": "Item",
+      "description": "A versatile component for displaying content with media, title, description, and actions.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -523,6 +554,7 @@
       "name": "kbd",
       "type": "registry:ui",
       "title": "Kbd",
+      "description": "Used to display textual user input from keyboard.",
       "dependencies": [
         "cn"
       ],
@@ -537,6 +569,7 @@
       "name": "label",
       "type": "registry:ui",
       "title": "Label",
+      "description": "Renders an accessible label associated with controls.",
       "dependencies": [
         "cn"
       ],
@@ -551,6 +584,7 @@
       "name": "marker",
       "type": "registry:ui",
       "title": "Marker",
+      "description": "Displays an inline status, system note, bordered row, or labeled separator in a conversation.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -567,6 +601,7 @@
       "name": "menubar",
       "type": "registry:ui",
       "title": "Menubar",
+      "description": "A visually persistent menu common in desktop applications that provides quick access to a consistent set of commands.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -586,6 +621,7 @@
       "name": "message-scroller",
       "type": "registry:ui",
       "title": "Message Scroller",
+      "description": "A chat scroll container that anchors turns, opens saved transcripts, follows streamed responses, loads history without jumping, and jumps to any message.",
       "dependencies": [
         "@shadcn/react",
         "cn",
@@ -605,6 +641,7 @@
       "name": "message",
       "type": "registry:ui",
       "title": "Message",
+      "description": "Displays a message in a conversation, with optional avatar, header, footer, and alignment.",
       "dependencies": [
         "cn"
       ],
@@ -619,6 +656,7 @@
       "name": "native-select",
       "type": "registry:ui",
       "title": "Native Select",
+      "description": "A styled native HTML select element with consistent design system integration.",
       "dependencies": [
         "cn",
         "lucide-react"
@@ -634,6 +672,7 @@
       "name": "navigation-menu",
       "type": "registry:ui",
       "title": "Navigation Menu",
+      "description": "A collection of links for navigating websites.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -651,6 +690,7 @@
       "name": "pagination",
       "type": "registry:ui",
       "title": "Pagination",
+      "description": "Pagination with page navigation, next and previous links.",
       "dependencies": [
         "cn",
         "lucide-react"
@@ -669,6 +709,7 @@
       "name": "popover",
       "type": "registry:ui",
       "title": "Popover",
+      "description": "Displays rich content in a portal, triggered by a button.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -684,6 +725,7 @@
       "name": "progress",
       "type": "registry:ui",
       "title": "Progress",
+      "description": "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -699,6 +741,7 @@
       "name": "questionnaire",
       "type": "registry:ui",
       "title": "Questionnaire",
+      "description": "A multi-step questionnaire with single-choice, multiple-choice, freeform, and skippable questions.",
       "dependencies": [
         "@shadcn/react",
         "cn",
@@ -718,6 +761,7 @@
       "name": "radio-group",
       "type": "registry:ui",
       "title": "Radio Group",
+      "description": "A set of checkable buttons—known as radio buttons—where no more than one of the buttons can be checked at a time.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -733,6 +777,7 @@
       "name": "resizable",
       "type": "registry:ui",
       "title": "Resizable",
+      "description": "Accessible resizable panel groups and layouts with keyboard support.",
       "dependencies": [
         "cn",
         "react-resizable-panels"
@@ -748,6 +793,7 @@
       "name": "scroll-area",
       "type": "registry:ui",
       "title": "Scroll Area",
+      "description": "Augments native scroll functionality for custom, cross-browser styling.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -763,6 +809,7 @@
       "name": "select",
       "type": "registry:ui",
       "title": "Select",
+      "description": "Displays a list of options for the user to pick from—triggered by a button.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -779,6 +826,7 @@
       "name": "separator",
       "type": "registry:ui",
       "title": "Separator",
+      "description": "Visually or semantically separates content.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -794,6 +842,7 @@
       "name": "sheet",
       "type": "registry:ui",
       "title": "Sheet",
+      "description": "Extends the Dialog component to display content that complements the main content of the screen.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -813,6 +862,7 @@
       "name": "sidebar",
       "type": "registry:ui",
       "title": "Sidebar",
+      "description": "A composable, themeable and customizable sidebar component.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -839,6 +889,7 @@
       "name": "skeleton",
       "type": "registry:ui",
       "title": "Skeleton",
+      "description": "Use to show a placeholder while content is loading.",
       "dependencies": [
         "cn"
       ],
@@ -853,6 +904,7 @@
       "name": "slider",
       "type": "registry:ui",
       "title": "Slider",
+      "description": "An input where the user selects a value from within a given range.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -868,6 +920,7 @@
       "name": "sonner",
       "type": "registry:ui",
       "title": "Sonner",
+      "description": "A succinct message that is displayed temporarily.",
       "dependencies": [
         "lucide-react",
         "next-themes",
@@ -884,6 +937,7 @@
       "name": "spinner",
       "type": "registry:ui",
       "title": "Spinner",
+      "description": "An indicator that can be used to show a loading state.",
       "dependencies": [
         "cn",
         "lucide-react"
@@ -899,6 +953,7 @@
       "name": "switch",
       "type": "registry:ui",
       "title": "Switch",
+      "description": "A control that allows the user to toggle between checked and not checked.",
       "dependencies": [
         "@base-ui/react",
         "cn"
@@ -914,6 +969,7 @@
       "name": "table",
       "type": "registry:ui",
       "title": "Table",
+      "description": "A responsive table component.",
       "dependencies": [
         "cn"
       ],
@@ -928,6 +984,7 @@
       "name": "tabs",
       "type": "registry:ui",
       "title": "Tabs",
+      "description": "A set of layered sections of content—known as tab panels—that are displayed one at a time.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -944,6 +1001,7 @@
       "name": "textarea",
       "type": "registry:ui",
       "title": "Textarea",
+      "description": "Displays a form textarea or a component that looks like a textarea.",
       "dependencies": [
         "cn"
       ],
@@ -958,6 +1016,7 @@
       "name": "toast",
       "type": "registry:ui",
       "title": "Toast",
+      "description": "A succinct message that is displayed temporarily.",
       "dependencies": [
         "@base-ui/react",
         "cn",
@@ -977,6 +1036,7 @@
       "name": "toggle-group",
       "type": "registry:ui",
       "title": "Toggle Group",
+      "description": "A set of two-state buttons that can be toggled on or off.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -996,6 +1056,7 @@
       "name": "toggle",
       "type": "registry:ui",
       "title": "Toggle",
+      "description": "A two-state button that can be either on or off.",
       "dependencies": [
         "@base-ui/react",
         "class-variance-authority",
@@ -1012,6 +1073,7 @@
       "name": "tooltip",
       "type": "registry:ui",
       "title": "Tooltip",
+      "description": "A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.",
       "dependencies": [
         "@base-ui/react",
         "cn"

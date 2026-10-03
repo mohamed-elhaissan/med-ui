@@ -2,6 +2,7 @@
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "drawer",
   "title": "Drawer",
+  "description": "A drawer component for React.",
   "dependencies": [
     "@base-ui/react",
     "cn"
