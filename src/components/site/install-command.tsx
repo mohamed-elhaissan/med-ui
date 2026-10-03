@@ -26,9 +26,11 @@ function wordColor(word: string, index: number) {
 export function InstallCommand({
   target = "",
   subcommand = "add",
+  label = "Install command",
 }: {
   target?: string
   subcommand?: "add" | "init"
+  label?: string
 }) {
   const [manager, setManager] = React.useState<Manager>("pnpm")
   const command = `${MANAGERS[manager]} ${subcommand} ${target}`.trim()
@@ -47,7 +49,7 @@ export function InstallCommand({
           </TabsList>
         </div>
       </Tabs>
-      <CopyButton value={command} className="absolute top-1.5 right-1.5" />
+      <CopyButton value={command} label={label} className="absolute top-1.5 right-1.5" />
       <pre className="no-scrollbar overflow-x-auto px-4 py-3.5 font-mono text-[0.8rem]">
         <code>
           {command.split(" ").map((word, index) => (

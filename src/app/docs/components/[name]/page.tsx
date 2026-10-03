@@ -58,28 +58,41 @@ export default async function ComponentPage({ params }: PageProps<"/docs/compone
         { id: "usage", title: "Usage" },
       ]}
     >
-      <ComponentPreview name={name} code={<CodeBlock code={demoSource} />} />
+      <ComponentPreview name={name} code={<CodeBlock code={demoSource} label={`${component.title} example code`} />} />
 
       <H2 id="installation">Installation</H2>
       <InstallTabs
-        command={<InstallCommand target={registryItemUrl(name)} />}
+        command={
+          <InstallCommand
+            target={registryItemUrl(name)}
+            label={`${component.title} install command`}
+          />
+        }
         manual={
           <Steps>
             {component.dependencies.length > 0 && (
               <>
                 <P>Install the following dependencies:</P>
-                <CodeBlock lang="bash" code={`npm install ${component.dependencies.join(" ")}`} />
+                <CodeBlock
+                  lang="bash"
+                  code={`npm install ${component.dependencies.join(" ")}`}
+                  label={`${component.title} dependencies command`}
+                />
               </>
             )}
             <P>Copy and paste the following code into your project.</P>
-            <CodeBlock title={`components/ui/${name}.tsx`} code={uiSource} />
+            <CodeBlock
+              title={`components/ui/${name}.tsx`}
+              code={uiSource}
+              label={`${component.title} source code`}
+            />
             <P>Update the import paths to match your project setup.</P>
           </Steps>
         }
       />
 
       <H2 id="usage">Usage</H2>
-      <CodeBlock code={usage} className="mt-6" />
+      <CodeBlock code={usage} label={`${component.title} usage`} className="mt-6" />
     </DocsPage>
   )
 }

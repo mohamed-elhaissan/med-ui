@@ -8,11 +8,13 @@ export async function CodeBlock({
   code,
   lang = "tsx",
   title,
+  label = title,
   className,
 }: {
   code: string
   lang?: BundledLanguage
   title?: string
+  label?: string
   className?: string
 }) {
   const html = await highlight(code, lang)
@@ -24,7 +26,7 @@ export async function CodeBlock({
           {title}
         </figcaption>
       )}
-      <CopyButton value={code} className="absolute top-2 right-2 z-10 bg-card hover:bg-muted" />
+      <CopyButton value={code} label={label} className="absolute top-2 right-2 z-10 bg-card hover:bg-muted" />
       <div
         className="[&_pre]:no-scrollbar [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:px-4 [&_pre]:py-3.5 [&_pre]:pr-12 [&_pre]:font-mono [&_pre]:text-[0.8rem] [&_pre]:leading-relaxed"
         dangerouslySetInnerHTML={{ __html: html }}
