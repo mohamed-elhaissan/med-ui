@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { Inter, JetBrains_Mono, Source_Serif_4 } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/site/site-footer";
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <main className="flex min-h-0 flex-1 flex-col">{children}</main>
           <SiteFooter />
           <Toaster />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
