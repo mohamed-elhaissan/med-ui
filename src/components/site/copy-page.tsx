@@ -1,10 +1,11 @@
 "use client"
 
 import * as React from "react"
-import { CheckIcon, ChevronDownIcon, CopyIcon, LinkIcon } from "lucide-react"
+import { ChevronDownIcon, CopyIcon, LinkIcon } from "lucide-react"
 import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
+import { AnimatedCopyIcon } from "@/components/site/copy-button"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -34,8 +35,8 @@ export function CopyPage() {
 
   return (
     <div className="flex rounded-lg bg-secondary">
-      <Button variant="secondary" size="sm" className="h-7 text-[0.8rem] shadow-none" onClick={copyPage}>
-        {copied ? <CheckIcon /> : <CopyIcon />}
+      <Button variant="secondary" size="sm" className="h-7 text-[0.8rem] shadow-none transition-transform active:scale-95" onClick={copyPage}>
+        <AnimatedCopyIcon copied={copied} />
         Copy Page
       </Button>
       <DropdownMenu>
