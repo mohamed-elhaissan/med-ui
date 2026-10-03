@@ -472,7 +472,7 @@
     {
       "name": "input-otp",
       "type": "registry:ui",
-      "title": "Input Otp",
+      "title": "Input OTP",
       "dependencies": [
         "cn",
         "input-otp",

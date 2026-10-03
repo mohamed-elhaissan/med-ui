@@ -13,7 +13,7 @@ const sources = [
 function title(name) {
   return name
     .split("-")
-    .map((part) => part[0].toUpperCase() + part.slice(1))
+    .map((part) => (part === "otp" ? "OTP" : part[0].toUpperCase() + part.slice(1)))
     .join(" ")
 }
 

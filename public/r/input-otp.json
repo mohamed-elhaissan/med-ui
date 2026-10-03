@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "input-otp",
-  "title": "Input Otp",
+  "title": "Input OTP",
   "dependencies": [
     "cn",
     "input-otp",
