@@ -1,5 +1,3 @@
-import Link from "next/link"
-
 import { buttonVariants } from "@/components/ui/button"
 import { Separator } from "@/components/ui/separator"
 import { CommandMenu } from "@/components/site/command-menu"
@@ -14,15 +12,6 @@ export function SiteHeader() {
       <div className="mx-auto w-full px-6">
         <div className="flex h-(--header-height) items-center gap-1">
           <MobileNav className="flex lg:hidden" />
-          <Link
-            href="/"
-            className="mr-2 hidden size-8 items-center justify-center rounded-md lg:flex"
-          >
-            <span className="grid size-6 place-items-center rounded-md bg-primary text-xs font-bold text-primary-foreground">
-              i
-            </span>
-            <span className="sr-only">{siteConfig.name}</span>
-          </Link>
           <MainNav items={siteConfig.navItems} className="hidden lg:flex" />
           <div className="ml-auto flex items-center gap-2 md:flex-1 md:justify-end">
             <div className="hidden w-full flex-1 md:flex md:w-auto md:flex-none">
