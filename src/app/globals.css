@@ -51,6 +51,10 @@
 
 :root {
   --header-height: 3.5rem;
+  --code-keyword: #5e6ad2;
+  --code-function: #0e7c8f;
+  --code-string: #a05a00;
+  --code-punctuation: #62666d;
   --background: #ffffff;
   --foreground: #0f1011;
   --card: #ffffff;
@@ -87,6 +91,10 @@
 
 .dark {
   color-scheme: dark;
+  --code-keyword: #828fff;
+  --code-function: #5ec4d6;
+  --code-string: #e6b673;
+  --code-punctuation: #8a8f98;
   --background: #010102;
   --foreground: #f7f8f8;
   --card: #0f1011;

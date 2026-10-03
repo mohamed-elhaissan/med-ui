@@ -15,6 +15,14 @@ const MANAGERS = {
 
 type Manager = keyof typeof MANAGERS
 
+function wordColor(word: string, index: number) {
+  if (index === 0) return "text-(--code-keyword)"
+  if (word.startsWith("shadcn")) return "text-(--code-function)"
+  if (word.startsWith("-")) return "text-(--code-punctuation)"
+  if (word === "add" || word === "init" || word === "dlx") return "text-foreground"
+  return "text-(--code-string)"
+}
+
 export function InstallCommand({
   target = "",
   subcommand = "add",
@@ -42,8 +50,12 @@ export function InstallCommand({
       <CopyButton value={command} className="absolute top-1.5 right-1.5" />
       <pre className="no-scrollbar overflow-x-auto px-4 py-3.5 font-mono text-[0.8rem]">
         <code>
-          <span className="text-primary">{MANAGERS[manager].split(" ")[0]}</span>
-          {command.slice(MANAGERS[manager].split(" ")[0].length)}
+          {command.split(" ").map((word, index) => (
+            <span key={index} className={wordColor(word, index)}>
+              {index > 0 && " "}
+              {word}
+            </span>
+          ))}
         </code>
       </pre>
     </figure>
