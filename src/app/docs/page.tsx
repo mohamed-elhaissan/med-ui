@@ -94,11 +94,11 @@ export default function IntroductionPage() {
 
       <H2 id="cli">CLI</H2>
       <P>The shadcn CLI does the rest. Add several components at once:</P>
-      <CodeBlock lang="bash" code=" shadcn@latest add @i-ui/dialog @i-ui/field @i-ui/sidebar" className="mt-6" />
+      <CodeBlock lang="bash" code="npx shadcn@latest add @i-ui/dialog @i-ui/field @i-ui/sidebar" className="mt-6" />
       <P>See a component&apos;s files before installing it:</P>
-      <CodeBlock lang="bash" code=" shadcn@latest view @i-ui/sidebar" className="mt-6" />
+      <CodeBlock lang="bash" code="npx shadcn@latest view @i-ui/sidebar" className="mt-6" />
       <P>Search everything in the registry:</P>
-      <CodeBlock lang="bash" code={` shadcn@latest search @i-ui -q "menu"`} className="mt-6" />
+      <CodeBlock lang="bash" code={`npx shadcn@latest search @i-ui -q "menu"`} className="mt-6" />
       <P>
         Add <Code>--overwrite</Code> to replace existing files, or <Code>--dry-run</Code> to preview
         changes.
@@ -111,7 +111,7 @@ export default function IntroductionPage() {
         <Code>registry.json</Code>, and builds one JSON file per component into{" "}
         <Code>public/r</Code>:
       </P>
-      <CodeBlock lang="bash" code=" run registry:build" className="mt-6" />
+      <CodeBlock lang="bash" code="npm run registry:build" className="mt-6" />
       <UL>
         <li>
           Full index: <Code>{`${siteConfig.url}/r/registry.json`}</Code>

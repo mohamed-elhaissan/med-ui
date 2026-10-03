@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Check, Copy } from "lucide-react"
+import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 
@@ -9,8 +10,14 @@ export function CopyCommand({ command }: { command: string }) {
   const [copied, setCopied] = useState(false)
 
   async function copy() {
-    await navigator.clipboard.writeText(command)
+    try {
+      await navigator.clipboard.writeText(command)
+    } catch {
+      toast.error("Couldn't copy. Your browser blocked clipboard access.")
+      return
+    }
     setCopied(true)
+    toast.success("Copied to clipboard")
     setTimeout(() => setCopied(false), 2000)
   }
 

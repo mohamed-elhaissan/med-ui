@@ -58,7 +58,7 @@ export default function McpPage() {
         </TabsList>
         {CLIENTS.map((client) => (
           <TabsContent key={client.value} value={client.value}>
-            <CodeBlock lang="bash" code={` shadcn@latest mcp init --client ${client.value}`} />
+            <CodeBlock lang="bash" code={`npx shadcn@latest mcp init --client ${client.value}`} />
           </TabsContent>
         ))}
       </Tabs>

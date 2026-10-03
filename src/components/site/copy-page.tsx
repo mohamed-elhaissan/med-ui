@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { CheckIcon, ChevronDownIcon, CopyIcon, LinkIcon } from "lucide-react"
+import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -14,15 +15,21 @@ import {
 export function CopyPage() {
   const [copied, setCopied] = React.useState(false)
 
-  async function copy(text: string) {
-    await navigator.clipboard.writeText(text)
+  async function copy(text: string, message: string) {
+    try {
+      await navigator.clipboard.writeText(text)
+    } catch {
+      toast.error("Couldn't copy. Your browser blocked clipboard access.")
+      return
+    }
     setCopied(true)
+    toast.success(message)
     setTimeout(() => setCopied(false), 2000)
   }
 
   function copyPage() {
     const page = document.querySelector<HTMLElement>("[data-slot=docs-main]")
-    if (page) copy(page.innerText)
+    if (page) copy(page.innerText, "Page copied to clipboard")
   }
 
   return (
@@ -43,7 +50,7 @@ export function CopyPage() {
             <CopyIcon />
             Copy page text
           </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => copy(window.location.href)}>
+          <DropdownMenuItem onClick={() => copy(window.location.href, "Link copied to clipboard")}>
             <LinkIcon />
             Copy page URL
           </DropdownMenuItem>

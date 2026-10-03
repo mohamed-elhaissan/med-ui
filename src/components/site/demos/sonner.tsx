@@ -3,7 +3,6 @@
 import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
-import { Toaster } from "@/components/ui/sonner"
 
 function exportReport() {
   return new Promise<{ name: string }>((resolve) => {
@@ -52,8 +51,6 @@ export function SonnerDemo() {
           Promise
         </Button>
       </div>
-      {/* Mounted here because the app layout has no global Toaster. */}
-      <Toaster position="bottom-center" />
     </>
   )
 }

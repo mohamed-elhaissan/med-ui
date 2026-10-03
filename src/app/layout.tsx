@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteFooter } from "@/components/site/site-footer";
 import { SiteHeader } from "@/components/site/site-header";
 import { ThemeProvider } from "@/components/site/theme-provider";
+import { Toaster } from "@/components/ui/sonner";
 
 const sans = Inter({
   variable: "--font-sans",
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <SiteHeader />
           <main className="flex min-h-0 flex-1 flex-col">{children}</main>
           <SiteFooter />
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

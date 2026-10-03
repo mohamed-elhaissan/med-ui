@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import { CheckIcon, CopyIcon } from "lucide-react"
+import { toast } from "sonner"
 
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -10,8 +11,14 @@ export function CopyButton({ value, className }: { value: string; className?: st
   const [copied, setCopied] = React.useState(false)
 
   async function copy() {
-    await navigator.clipboard.writeText(value)
+    try {
+      await navigator.clipboard.writeText(value)
+    } catch {
+      toast.error("Couldn't copy. Your browser blocked clipboard access.")
+      return
+    }
     setCopied(true)
+    toast.success("Copied to clipboard")
     setTimeout(() => setCopied(false), 2000)
   }
 
