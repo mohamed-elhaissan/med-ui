@@ -4,7 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CodeBlock } from "@/components/site/code-block"
 import { DocsPage } from "@/components/site/docs-page"
 import { Callout, Code, H2, P, UL } from "@/components/site/docs-typography"
-import { siteConfig } from "@/lib/site"
+import { CLI, siteConfig } from "@/lib/site"
 
 export const metadata: Metadata = { title: "MCP Server · med-ui" }
 
@@ -23,7 +23,7 @@ const REGISTRY_CONFIG = JSON.stringify(
 )
 
 const MCP_CONFIG = JSON.stringify(
-  { mcpServers: { "med-ui": { command: "npx", args: ["shadcn@latest", "mcp"] } } },
+  { mcpServers: { "med-ui": { command: "npx", args: [CLI, "mcp"] } } },
   null,
   2
 )
@@ -64,7 +64,7 @@ export default function McpPage() {
         </TabsList>
         {CLIENTS.map((client) => (
           <TabsContent key={client.value} value={client.value}>
-            <CodeBlock lang="bash" code={`npx shadcn@latest mcp init --client ${client.value}`} />
+            <CodeBlock lang="bash" code={`npx ${CLI} mcp init --client ${client.value}`} />
           </TabsContent>
         ))}
       </Tabs>

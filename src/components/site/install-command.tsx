@@ -5,12 +5,13 @@ import { TerminalIcon } from "lucide-react"
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { CopyButton } from "@/components/site/copy-button"
+import { CLI } from "@/lib/site"
 
 const MANAGERS = {
-  pnpm: "pnpm dlx shadcn@latest",
-  npm: "npx shadcn@latest",
-  yarn: "yarn shadcn@latest",
-  bun: "bunx --bun shadcn@latest",
+  pnpm: `pnpm dlx ${CLI}`,
+  npm: `npx ${CLI}`,
+  yarn: `yarn ${CLI}`,
+  bun: `bunx --bun ${CLI}`,
 } as const
 
 type Manager = keyof typeof MANAGERS

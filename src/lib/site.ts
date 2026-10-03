@@ -1,3 +1,6 @@
+// The installer version the docs tell people to run. Bump after testing a new release.
+export const CLI = "shadcn@4.21.1"
+
 export const siteConfig = {
   name: "med-ui",
   description: "Beautifully designed components you install and own.",
@@ -14,5 +17,5 @@ export function registryItemUrl(component: string) {
 }
 
 export function installCommand(component: string) {
-  return `npx shadcn@latest add ${registryItemUrl(component)}`
+  return `npx ${CLI} add ${registryItemUrl(component)}`
 }
