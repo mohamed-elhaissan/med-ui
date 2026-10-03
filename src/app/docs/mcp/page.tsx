@@ -45,7 +45,7 @@ export default function McpPage() {
       <H2 id="quick-start">Quick Start</H2>
       <P>
         First, add the <Code>@i-ui</Code> registry to your project as described in{" "}
-        <DocLinkA href="/docs/installation#add-registry">Installation</DocLinkA>. Then run the
+        <DocLinkA href="/docs#add-registry">Installation</DocLinkA>. Then run the
         setup command for your client:
       </P>
       <Tabs defaultValue="claude" className="mt-6 gap-4">
