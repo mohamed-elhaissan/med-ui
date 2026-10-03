@@ -6,6 +6,8 @@ med-ui is a collection of 62 accessible, beautifully designed React components t
 
 [**Documentation**](https://ui.elhcn.com/docs) · [**Components**](https://ui.elhcn.com/docs/components) · [**Theming**](https://ui.elhcn.com/docs/theming) · [**MCP**](https://ui.elhcn.com/docs/mcp)
 
+[![The med-ui documentation site](.github/assets/preview.webp)](https://ui.elhcn.com/docs)
+
 ---
 
 ## Features
