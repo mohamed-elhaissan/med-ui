@@ -41,7 +41,12 @@ export default async function ComponentPage({ params }: PageProps<"/docs/compone
 
   const demoSource = readSource("components", "site", "demos", `${name}.tsx`)
   const uiSource = readSource("components", "ui", `${name}.tsx`)
-  const usage = `import { ${exportedNames(uiSource).join(", ")} } from "@/components/ui/${name}"`
+  const names = exportedNames(uiSource)
+  const from = `from "@/components/ui/${name}"`
+  const usage =
+    names.length > 2
+      ? `import {\n${names.map((n) => `  ${n},`).join("\n")}\n} ${from}`
+      : `import { ${names.join(", ")} } ${from}`
 
   return (
     <DocsPage
