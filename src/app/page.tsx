@@ -14,7 +14,7 @@ export default function Home() {
       />
 
       <div className="mx-auto flex w-full max-w-6xl flex-1 flex-col items-center justify-center gap-8 px-4 py-20 text-center sm:px-6">
-        <h1 className="max-w-3xl text-5xl font-semibold tracking-tighter text-balance sm:text-7xl">
+        <h1 className="max-w-3xl text-5xl font-medium tracking-tight text-balance sm:text-7xl">
           Components you own.{" "}
           <span className="text-muted-foreground">Styled your way.</span>
         </h1>
