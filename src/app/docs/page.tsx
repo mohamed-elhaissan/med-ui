@@ -204,6 +204,10 @@ export default function IntroductionPage() {
       <div className="mt-6">
         <InstallCommand target="@i-ui/button" />
       </div>
+      <P>Want everything? Install all {components.length} components with one command:</P>
+      <div className="mt-6">
+        <InstallCommand target="@i-ui/all" label="Install-all command" />
+      </div>
       <P>Or install straight from a component&apos;s URL:</P>
       <div className="mt-6">
         <InstallCommand target={registryItemUrl("button")} />
