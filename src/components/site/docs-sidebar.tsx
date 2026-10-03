@@ -67,10 +67,10 @@ function SidebarGroup({
 }) {
   return (
     <div className={`flex flex-col p-2 ${className ?? ""}`}>
-      <p className="flex h-8 shrink-0 items-center px-2 text-sm font-semibold text-foreground">
+      <p className="flex h-8 shrink-0 items-center px-2 text-xs font-medium text-muted-foreground">
         {label}
       </p>
-      <ul className="flex flex-col gap-0.5 pr-4">{children}</ul>
+      <ul className="flex flex-col gap-0.5">{children}</ul>
     </div>
   )
 }
@@ -92,7 +92,7 @@ function SidebarLink({
         href={link.href}
         data-active={active}
         data-section={section || undefined}
-        className="flex h-8 w-full items-center gap-2 rounded-md px-2 text-[0.85rem] text-muted-foreground transition-colors hover:text-foreground data-[active=true]:bg-primary/10 data-[active=true]:font-medium data-[active=true]:text-primary"
+        className="flex h-[30px] w-fit items-center gap-2 rounded-md border border-transparent px-2 text-[0.8rem] font-medium text-foreground/90 transition-colors hover:bg-accent hover:text-accent-foreground data-[active=true]:border-accent data-[active=true]:bg-accent data-[active=true]:text-accent-foreground"
       >
         {link.name}
         {isNew && <span className="size-2 rounded-full bg-primary" title="New" />}
