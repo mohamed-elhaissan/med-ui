@@ -149,3 +149,13 @@
 @utility scroll-fade {
   mask-image: linear-gradient(to bottom, transparent, black 1.5rem, black calc(100% - 3rem), transparent);
 }
+
+.shiki,
+.shiki span {
+  color: var(--shiki-light);
+}
+
+.dark .shiki,
+.dark .shiki span {
+  color: var(--shiki-dark);
+}

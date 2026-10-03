@@ -39,7 +39,10 @@ export function Steps({ children }: { children: React.ReactNode }) {
 
 export function DocLinkA({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <a href={href} className="font-medium underline underline-offset-4">
+    <a
+      href={href}
+      className="font-medium text-primary underline-offset-4 transition-colors hover:underline"
+    >
       {children}
     </a>
   )

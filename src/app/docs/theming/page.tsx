@@ -48,7 +48,7 @@ export default function ThemingPage() {
         i-ui ships a Linear-inspired palette: a near-black canvas, charcoal surfaces, hairline
         borders and a lavender-blue accent. The tokens live in your global CSS file:
       </P>
-      <CodeBlock title="app/globals.css" code={TOKENS} className="mt-6" />
+      <CodeBlock lang="css" title="app/globals.css" code={TOKENS} className="mt-6" />
 
       <H2 id="convention">Convention</H2>
       <P>

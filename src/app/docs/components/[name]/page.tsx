@@ -53,7 +53,7 @@ export default async function ComponentPage({ params }: PageProps<"/docs/compone
         { id: "usage", title: "Usage" },
       ]}
     >
-      <ComponentPreview name={name} source={demoSource} />
+      <ComponentPreview name={name} code={<CodeBlock code={demoSource} />} />
 
       <H2 id="installation">Installation</H2>
       <InstallTabs
@@ -63,7 +63,7 @@ export default async function ComponentPage({ params }: PageProps<"/docs/compone
             {component.dependencies.length > 0 && (
               <>
                 <P>Install the following dependencies:</P>
-                <CodeBlock code={`npm install ${component.dependencies.join(" ")}`} />
+                <CodeBlock lang="bash" code={`npm install ${component.dependencies.join(" ")}`} />
               </>
             )}
             <P>Copy and paste the following code into your project.</P>

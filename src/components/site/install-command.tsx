@@ -4,7 +4,7 @@ import * as React from "react"
 import { TerminalIcon } from "lucide-react"
 
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CopyButton } from "@/components/site/code-block"
+import { CopyButton } from "@/components/site/copy-button"
 
 const MANAGERS = {
   pnpm: "pnpm dlx shadcn@latest",
@@ -41,7 +41,10 @@ export function InstallCommand({
       </Tabs>
       <CopyButton value={command} className="absolute top-1.5 right-1.5" />
       <pre className="no-scrollbar overflow-x-auto px-4 py-3.5 font-mono text-[0.8rem]">
-        <code>{command}</code>
+        <code>
+          <span className="text-primary">{MANAGERS[manager].split(" ")[0]}</span>
+          {command.slice(MANAGERS[manager].split(" ")[0].length)}
+        </code>
       </pre>
     </figure>
   )

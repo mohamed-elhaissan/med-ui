@@ -1,10 +1,9 @@
 "use client"
 
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { CodeBlock } from "@/components/site/code-block"
 import { demos } from "@/components/site/demos"
 
-export function ComponentPreview({ name, source }: { name: string; source: string }) {
+export function ComponentPreview({ name, code }: { name: string; code: React.ReactNode }) {
   const Demo = demos[name]
 
   return (
@@ -19,7 +18,7 @@ export function ComponentPreview({ name, source }: { name: string; source: strin
         </div>
       </TabsContent>
       <TabsContent value="code">
-        <CodeBlock code={source} className="[&_pre]:max-h-[450px]" />
+        {code}
       </TabsContent>
     </Tabs>
   )

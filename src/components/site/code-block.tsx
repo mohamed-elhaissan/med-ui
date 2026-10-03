@@ -1,42 +1,22 @@
-"use client"
+import type { BundledLanguage } from "shiki"
 
-import * as React from "react"
-import { CheckIcon, CopyIcon } from "lucide-react"
-
-import { Button } from "@/components/ui/button"
+import { CopyButton } from "@/components/site/copy-button"
+import { highlight } from "@/lib/highlight"
 import { cn } from "@/lib/utils"
 
-export function CopyButton({ value, className }: { value: string; className?: string }) {
-  const [copied, setCopied] = React.useState(false)
-
-  async function copy() {
-    await navigator.clipboard.writeText(value)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
-  return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={copy}
-      className={cn("size-7 text-muted-foreground hover:text-foreground", className)}
-    >
-      {copied ? <CheckIcon /> : <CopyIcon />}
-      <span className="sr-only">{copied ? "Copied" : "Copy"}</span>
-    </Button>
-  )
-}
-
-export function CodeBlock({
+export async function CodeBlock({
   code,
+  lang = "tsx",
   title,
   className,
 }: {
   code: string
+  lang?: BundledLanguage
   title?: string
   className?: string
 }) {
+  const html = await highlight(code, lang)
+
   return (
     <figure className={cn("relative overflow-hidden rounded-xl border bg-card", className)}>
       {title && (
@@ -45,9 +25,10 @@ export function CodeBlock({
         </figcaption>
       )}
       <CopyButton value={code} className="absolute top-1.5 right-1.5 z-10" />
-      <pre className="no-scrollbar max-h-[450px] overflow-auto px-4 py-3.5 pr-12 font-mono text-[0.8rem] leading-relaxed">
-        <code>{code}</code>
-      </pre>
+      <div
+        className="[&_pre]:no-scrollbar [&_pre]:max-h-[450px] [&_pre]:overflow-auto [&_pre]:px-4 [&_pre]:py-3.5 [&_pre]:pr-12 [&_pre]:font-mono [&_pre]:text-[0.8rem] [&_pre]:leading-relaxed"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </figure>
   )
 }

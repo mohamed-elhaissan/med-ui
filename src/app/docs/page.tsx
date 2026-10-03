@@ -80,7 +80,7 @@ export default function IntroductionPage() {
       <P>
         Register i-ui under the <Code>@i-ui</Code> namespace in <Code>components.json</Code>:
       </P>
-      <CodeBlock title="components.json" code={registryJson} className="mt-6" />
+      <CodeBlock lang="json" title="components.json" code={registryJson} className="mt-6" />
 
       <H3 id="add-components">Add Components</H3>
       <P>Add any component by name. Its dependencies are installed for you:</P>
@@ -94,11 +94,11 @@ export default function IntroductionPage() {
 
       <H2 id="cli">CLI</H2>
       <P>The shadcn CLI does the rest. Add several components at once:</P>
-      <CodeBlock code="npx shadcn@latest add @i-ui/dialog @i-ui/field @i-ui/sidebar" className="mt-6" />
+      <CodeBlock lang="bash" code=" shadcn@latest add @i-ui/dialog @i-ui/field @i-ui/sidebar" className="mt-6" />
       <P>See a component&apos;s files before installing it:</P>
-      <CodeBlock code="npx shadcn@latest view @i-ui/sidebar" className="mt-6" />
+      <CodeBlock lang="bash" code=" shadcn@latest view @i-ui/sidebar" className="mt-6" />
       <P>Search everything in the registry:</P>
-      <CodeBlock code={`npx shadcn@latest search @i-ui -q "menu"`} className="mt-6" />
+      <CodeBlock lang="bash" code={` shadcn@latest search @i-ui -q "menu"`} className="mt-6" />
       <P>
         Add <Code>--overwrite</Code> to replace existing files, or <Code>--dry-run</Code> to preview
         changes.
@@ -111,7 +111,7 @@ export default function IntroductionPage() {
         <Code>registry.json</Code>, and builds one JSON file per component into{" "}
         <Code>public/r</Code>:
       </P>
-      <CodeBlock code="npm run registry:build" className="mt-6" />
+      <CodeBlock lang="bash" code=" run registry:build" className="mt-6" />
       <UL>
         <li>
           Full index: <Code>{`${siteConfig.url}/r/registry.json`}</Code>

@@ -58,7 +58,7 @@ export default function McpPage() {
         </TabsList>
         {CLIENTS.map((client) => (
           <TabsContent key={client.value} value={client.value}>
-            <CodeBlock code={`npx shadcn@latest mcp init --client ${client.value}`} />
+            <CodeBlock lang="bash" code={` shadcn@latest mcp init --client ${client.value}`} />
           </TabsContent>
         ))}
       </Tabs>
@@ -69,7 +69,7 @@ export default function McpPage() {
         If your client isn&apos;t listed, add the server to its MCP configuration yourself. For
         Claude Code, that is <Code>.mcp.json</Code> in your project root:
       </P>
-      <CodeBlock title=".mcp.json" code={MCP_CONFIG} className="mt-6" />
+      <CodeBlock lang="json" title=".mcp.json" code={MCP_CONFIG} className="mt-6" />
 
       <H2 id="example-prompts">Example Prompts</H2>
       <P>Once connected, ask your assistant things like:</P>
