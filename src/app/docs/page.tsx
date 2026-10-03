@@ -200,13 +200,13 @@ export default function IntroductionPage() {
       />
 
       <H2 id="add-components">7. Add Components</H2>
-      <P>You&apos;re ready. Add any component by name:</P>
-      <div className="mt-6">
-        <InstallCommand target="@i-ui/button" />
-      </div>
-      <P>Want everything? Install all {components.length} components with one command:</P>
+      <P>You&apos;re ready. Install all {components.length} components with one command:</P>
       <div className="mt-6">
         <InstallCommand target="@i-ui/all" label="Install-all command" />
+      </div>
+      <P>Or add only the components you need, by name:</P>
+      <div className="mt-6">
+        <InstallCommand target="@i-ui/button" />
       </div>
       <P>Or install straight from a component&apos;s URL:</P>
       <div className="mt-6">
